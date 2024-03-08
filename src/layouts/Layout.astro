@@ -1,0 +1,90 @@
+---
+interface Props {
+  title?: string;
+  decription?: string;
+}
+
+const {
+  title = "Frontend Mentor | Coffeeroasters subscription site",
+  decription = "Frontend Mentor | Coffeeroasters subscription site",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={decription} />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/public/images/favicon-32x32.png"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font: inherit;
+  }
+
+  html {
+    hanging-punctuation: first last;
+  }
+
+  body {
+    min-height: 100svh;
+  }
+
+  img,
+  picture,
+  svg,
+  video {
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 1rem;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
+
+  /* 75ch not higher than that */
+  p {
+    max-width: 75ch;
+    text-wrap: pretty;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    :has(:target) {
+      scroll-behavior: smooth;
+      scroll-padding-top: 3rem;
+    }
+  }
+</style>

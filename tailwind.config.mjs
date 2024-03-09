@@ -21,7 +21,11 @@ module.exports = {
       '2xl': '1442px',
     },
     extend: {
-
+      backgroundImage: {
+        'hero-img-mobile': "url('/images/home/mobile/image-hero-coffeepress.jpg')",
+        'hero-img-tablet': "url('/images/home/tablet/image-hero-coffeepress.jpg')",
+        'hero-img-desktop': "url('/images/home/desktop/image-hero-coffeepress.jpg')",
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],

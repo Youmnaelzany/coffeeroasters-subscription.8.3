@@ -25,6 +25,7 @@ module.exports = {
         'hero-img-mobile': "url('/images/home/mobile/image-hero-coffeepress.jpg')",
         'hero-img-tablet': "url('/images/home/tablet/image-hero-coffeepress.jpg')",
         'hero-img-desktop': "url('/images/home/desktop/image-hero-coffeepress.jpg')",
+        'before-color': "linear-gradient(180deg, rgba(254, 252, 247, 0.00) 0%, #FEFCF7 100%)"
       }
     },
   },
